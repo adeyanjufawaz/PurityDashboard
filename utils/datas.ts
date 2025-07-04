@@ -191,3 +191,110 @@ const people: Person[] = [
 ];
 
 export default people;
+
+
+export const authorsData = [
+  {
+    image: '/images/esthera.png', 
+    name: 'Esthera Jackson',
+    email: 'alexa@simmmple.com',
+    organization: 'Organization',
+    role: 'Manager',
+    status: 'Online',
+    date: '14/06/21',
+  },
+  {
+    image: '/images/alexa.png',
+    name: 'Alexa Liras',
+    email: 'laurent@simmmple.com',
+    organization: 'Developer',
+    role: 'Programmer',
+    status: 'Offline',
+    date: '12/05/21',
+  },
+  {
+    image: '/images/laurent.png',
+    name: 'Laurent Michael',
+    email: 'laurent@simmmple.com',
+    organization: 'Projects',
+    role: 'Executive',
+    status: 'Online',
+    date: '07/06/21',
+  },
+  {
+    image: '/images/freduardo.png',
+    name: 'Freduardo Hill',
+    email: 'freduardo@simmmple.com',
+    organization: 'Organization',
+    role: 'Manager',
+    status: 'Online',
+    date: '14/11/21',
+  },
+  {
+    image: '/images/daniel.png',
+    name: 'Daniel Thomas',
+    email: 'daniel@simmmple.com',
+    organization: 'Developer',
+    role: 'Programmer',
+    status: 'Offline',
+    date: '21/01/21',
+  },
+];
+
+import {
+  SiAdobexd ,
+  SiAtlassian,
+  SiSlack,
+  SiSpotify,
+  SiDatabricks, // used as a placeholder diamond icon
+} from 'react-icons/si';
+
+export const projects:{
+    icon: any;
+    title: string;
+    color: string;
+    budget: string;
+    status: string;
+    completion: string;
+}[] = [
+  {
+    icon: SiAdobexd ,
+    title: 'Purity UI Version',
+    color:"text-pink-500",
+    budget: '$14,000',
+    status: 'In Progress',
+    completion: "40%",
+  },
+  {
+    icon: SiAtlassian,
+    title: 'Add Progress Track',
+    color:"text-blue-500",
+    budget: '$3,000',
+    status: 'Pending',
+    completion: "60%",
+  },
+  {
+    icon: SiSlack,
+    title: 'Fix Platform Errors',
+    color:"text-[#4A154B]",
+    budget: 'Not set',
+    status: 'Done',
+    completion: "100%",
+  },
+  {
+    icon: SiSpotify,
+    title: 'Launch our Mobile App',
+    color:"text-green-500",
+    budget: '$32,000',
+    status: 'Done',
+    completion: "50%",
+  },
+  {
+    icon: SiDatabricks,
+    title: 'Add the New Pricing Page',
+    color:"text-blue-400",
+    budget: '$400',
+    status: 'In Progress',
+    completion: "25%",
+  },
+];

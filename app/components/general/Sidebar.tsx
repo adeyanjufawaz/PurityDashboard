@@ -27,10 +27,10 @@ const Sidebar = () => {
   const { isDark, toggleTheme, isOpen, toggleIsOpen } = useProvider();
 
   const menuItems: MenuItem[] = [
-    { icon: FiHome, title: "Dashboard", path: "/" },
-    { icon: FiBarChart2, title: "Table", path: "/tables" },
-    { icon: FiCreditCard, title: "Billings", path: "/billings" },
-    { icon: FiUser, title: "RTL", path: "/rtl" },
+    { icon: FiHome, title: "Dashboard", path: "/dash" },
+    { icon: FiBarChart2, title: "Table", path: "/dash/tables" },
+    { icon: FiCreditCard, title: "Billings", path: "/dash/billings" },
+    { icon: FiUser, title: "RTL", path: "/dash/rtl" },
   ];
 
   const profileMenu: MenuItem[] = [
