@@ -10,7 +10,7 @@ function MobileNav() {
   const { toggleIsOpen, isDark, toggleTheme } = useProvider();
 
   return (
-    <div className="flex sticky top-0 px-3 justify-end gap-3 items-center bg-pry  h-10 md:20">
+    <div className="flex px-3 justify-end gap-3 items-center bg-pry  h-10 md:20">
       <div className="w-1/3 max-w-52 h-full relative ">
         <input
           type="text"

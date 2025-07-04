@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "../../globals.css"
+import "../../globals.css";
 import { NavOpenAndThemeProvider } from "@/app/components/general/NavOpenAndThemeProvider";
 import Sidebar from "@/app/components/general/Sidebar";
 import MobileNav from "@/app/components/general/MobileNav";
@@ -17,20 +17,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    
-      <NavOpenAndThemeProvider>
-        <div className="bg-pry text-textCol">
-          <div className="flex min-h-screen pt-7">
-            <Sidebar />
-            <main className="flex-1 w-full lg:ml-[270px] overflow-x-auto ">
-              <MobileNav />
-              {children}
+    <div className="bg-pry text-textCol">
+      <div className="flex min-h-screen pt-7">
+        <Sidebar />
+        <main className="flex-1 relative  w-[calc(100%-250px)] lg:ml-[250px] overflow-x-auto ">
+          <MobileNav />
+          {children}
 
-              <Footer />
-            </main>
-          </div>
-        </div>
-      </NavOpenAndThemeProvider>
-    
+          <Footer />
+        </main>
+      </div>
+    </div>
   );
 }

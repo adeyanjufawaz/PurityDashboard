@@ -28,14 +28,14 @@ function TransactionInfo() {
     {
       name: "Stripe",
       date: "26 March 2021",
-      icon: BiUpArrowAlt,
+      icon: BiDownArrowAlt,
       time: "1:45 PM",
-      amount: +800,
+      amount: -800,
     },
     {
       name: "HubSpot",
       date: "26 March 2021",
-      icon: AiOutlineExclamation,
+      icon: BiUpArrowAlt,
       time: "12:30 PM",
       amount: +1700,
     },
