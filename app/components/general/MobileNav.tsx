@@ -5,9 +5,16 @@ import { FaSearch, FaUser } from "react-icons/fa";
 import { MdDarkMode, MdLightMode, MdMenu } from "react-icons/md";
 import { IoMdNotifications } from "react-icons/io";
 import { useProvider } from "./NavOpenAndThemeProvider";
+import Notification from "../notification/notification";
 
 function MobileNav() {
-  const { toggleIsOpen, isDark, toggleTheme } = useProvider();
+  const {
+    toggleIsOpen,
+    isDark,
+    toggleTheme,
+    isNotficationOpen,
+    toggleIsNotficationOpen,
+  } = useProvider();
 
   return (
     <div className="flex px-3 justify-end gap-3 items-center bg-pry  h-10 md:20">
@@ -17,21 +24,33 @@ function MobileNav() {
           className="pl-[30%] md:pl-[15%] text-xs w-full  h-full rounded-lg text-textCol outline-0 border-[.5px] border-textCol"
           placeholder="Type here..."
         />
-        <FaSearch className="absolute h-7/8 top-[7%] left-2 text-textCol"/>
+        <FaSearch className="absolute h-7/8 top-[7%] left-2 text-textCol" />
       </div>
-      <div className="flex gap-2 ">
-        <button className=" text-textGreyCol" onClick={toggleIsOpen}>
+      <div className="flex items-center gap-2 ">
+        <div className="cursor-pointer text-textGreyCol">
           <FaUser />
-        </button>
-        <button className=" text-textGreyCol" onClick={toggleIsOpen}>
-          <MdMenu />
-        </button>
-        <button className=" text-textGreyCol" onClick={toggleTheme}>
+        </div>
+        <div className="cursor-pointer text-textGreyCol font-semibold">
+          Sign in
+        </div>
+        <div className=" cursor-pointer text-textGreyCol" onClick={toggleTheme}>
           {isDark ? <MdLightMode /> : <MdDarkMode />}
-        </button>
-        <button className=" text-textGreyCol" onClick={toggleIsOpen}>
-          <IoMdNotifications />
-        </button>
+        </div>
+        <div className="relative">
+          <div
+            className="cursor-pointer text-textGreyCol"
+            onClick={toggleIsNotficationOpen}
+          >
+            <IoMdNotifications />
+          </div>
+          <div
+            className={` absolute top-[200%] right-[5%] transition-transform duration-400  ${
+              isNotficationOpen ? ` scale-100 h-full` : "scale-0 h-0"
+            }`}
+          >
+            <Notification />
+          </div>
+        </div>
       </div>
     </div>
   );

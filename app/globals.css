@@ -10,11 +10,13 @@
   --color-textGreyCol: var(--textGreyCol);
   --color-textCol: var(--textCol);
   --color-grayCol: var(--grayCol);
+  --color-notification:var(--notiCol)
 }
 
 :root {
   --pry: #fff;
   --card: whitesmoke;
+  --notiCol:whitesmoke;
   --sec: #0e8388;
   --tet: #7d8085;
   --darkCrad: #d1cece40;
@@ -23,11 +25,11 @@
   --grayCol: #63686e;
 }
 .dark {
-  --pry: #11121a;
+  --pry: #1A202C;
   --card: #030306;
+  --notiCol:#101828;
   --sec: #0e8388;
   --tet: #7d8085;
-
   --darkCrad: #101828;
   --textGreyCol: #fff;
   --textCol: #fff;

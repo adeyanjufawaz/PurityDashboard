@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <div className="p-4 bg-pry ">
-      <section className="grid gap-4 grid-cols-1 py-6 lg:grid-cols-4">
+      <section className="grid gap-4 md:grid-cols-2 grid-cols-1 py-6 lg:grid-cols-4">
         {dashHead.map((dashHead) => (
           <Card key={dashHead.percentage}>
             <div className="flex justify-between gap-1">
@@ -113,7 +113,7 @@ export default function Home() {
                       <AlignedImage total={person.totalImg} />
                     </td>
                     <td className="p-2 min-w-[200px] border-b-3">
-                      {person.school}
+                      {person.members}
                     </td>
                     <td className="p-2 min-w-[200px] border-b-3 ">
                       {person.address}

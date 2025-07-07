@@ -100,7 +100,7 @@ interface Person {
   name: string;
   age: number;
   sex: 'Male' | 'Female' | 'Other';
-  school: string;
+  members: string;
   address: string;
   mail: string;
   phone: string;
@@ -112,7 +112,7 @@ const people: Person[] = [
     name: 'Emma Johnson',
     age: 22,
     sex: 'Female',
-    school: 'University of California',
+    members: 'University of California',
     address: '123 Main St, Los Angeles, CA',
     mail: 'emma.johnson@example.com',
     phone: '(213) 555-1234',
@@ -122,7 +122,7 @@ const people: Person[] = [
     name: 'Michael Chen',
     age: 19,
     sex: 'Male',
-    school: 'New York University',
+    members: 'New York University',
     address: '456 Broadway, New York, NY',
     mail: 'michael.chen@example.com',
     phone: '(212) 555-5678',
@@ -132,7 +132,7 @@ const people: Person[] = [
     name: 'Sarah Williams',
     age: 21,
     sex: 'Female',
-    school: 'University of Texas',
+    members: 'University of Texas',
     address: '789 Oak Ave, Austin, TX',
     mail: 'sarah.williams@example.com',
     phone: '(512) 555-9012',
@@ -142,7 +142,7 @@ const people: Person[] = [
     name: 'David Kim',
     age: 20,
     sex: 'Male',
-    school: 'Harvard University',
+    members: 'Harvard University',
     address: '101 Cambridge St, Cambridge, MA',
     mail: 'david.kim@example.com',
     phone: '(617) 555-3456',
@@ -152,7 +152,7 @@ const people: Person[] = [
     name: 'Jessica Martinez',
     age: 23,
     sex: 'Female',
-    school: 'Stanford University',
+    members: 'Stanford University',
     address: '202 Palm Dr, Stanford, CA',
     mail: 'jessica.martinez@example.com',
     phone: '(650) 555-7890',
@@ -162,7 +162,7 @@ const people: Person[] = [
     name: 'Ryan Taylor',
     age: 18,
     sex: 'Male',
-    school: 'University of Michigan',
+    members: 'University of Michigan',
     address: '303 State St, Ann Arbor, MI',
     mail: 'ryan.taylor@example.com',
     phone: '(734) 555-2345',
@@ -172,7 +172,7 @@ const people: Person[] = [
     name: 'Olivia Brown',
     age: 22,
     sex: 'Female',
-    school: 'Columbia University',
+    members: 'Columbia University',
     address: '404 Riverside Dr, New York, NY',
     mail: 'olivia.brown@example.com',
     phone: '(212) 555-6789',
@@ -182,7 +182,7 @@ const people: Person[] = [
     name: 'Daniel Wilson',
     age: 19,
     sex: 'Male',
-    school: 'University of Florida',
+    members: 'University of Florida',
     address: '505 Sunshine Blvd, Gainesville, FL',
     mail: 'daniel.wilson@example.com',
     phone: '(352) 555-0123',

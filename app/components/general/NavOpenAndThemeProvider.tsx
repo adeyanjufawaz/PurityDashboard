@@ -4,8 +4,10 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 type ProviderContextType = {
   isDark: boolean;
   isOpen: boolean;
+  isNotficationOpen:boolean;
   toggleTheme: () => void;
   toggleIsOpen: () => void;
+  toggleIsNotficationOpen:()=>void
 };
 const ProviderContext = createContext<ProviderContextType | undefined>(
   undefined
@@ -25,7 +27,9 @@ export function NavOpenAndThemeProvider({
 
   const [isDark, setIsDark] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [isNotficationOpen, setIsNotficationOpen] = useState(false);
   const toggleIsOpen = () => setIsOpen((prev) => !prev);
+  const toggleIsNotficationOpen = () => setIsNotficationOpen((prev) => !prev);
 
   const toggleTheme = () => {
     setIsDark(!isDark);
@@ -39,9 +43,10 @@ export function NavOpenAndThemeProvider({
     }
   };
 
+
   return (
     <ProviderContext.Provider
-      value={{ isDark, toggleTheme, isOpen, toggleIsOpen }}
+      value={{ isDark, toggleTheme, isOpen, isNotficationOpen, toggleIsOpen, toggleIsNotficationOpen }}
     >
       {children}
     </ProviderContext.Provider>
