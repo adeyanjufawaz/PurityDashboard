@@ -30,8 +30,11 @@ function MobileNav() {
         <div className="cursor-pointer text-textGreyCol">
           <FaUser />
         </div>
-        <div className="cursor-pointer text-textGreyCol font-semibold">
+        <div className="hidden lg:block cursor-pointer text-textGreyCol font-semibold">
           Sign in
+        </div>
+        <div onClick={toggleIsOpen} className=" lg:hidden cursor-pointer text-textGreyCol font-semibold">
+          <MdMenu/>
         </div>
         <div className=" cursor-pointer text-textGreyCol" onClick={toggleTheme}>
           {isDark ? <MdLightMode /> : <MdDarkMode />}

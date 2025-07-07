@@ -45,7 +45,7 @@ const Sidebar = () => {
       {/* Mobile Screen */}
       <div
         className={`fixed flex flex-col transition-transform duration-700  justify-start items-start top-[2%] left-[5%] h-[95%] p-3 shadow-2xl rounded-md  z-999 bg-card text-textCol
-          w-3/5 md:w-1/3 ${isOpen ? `translate-x-0 ` : "-translate-x-[120%]"}`}
+          w-[70%] md:w-1/3 ${isOpen ? `translate-x-0 ` : "-translate-x-[120%]"}`}
       >
         <button
           className=" absolute right-5 top-5 text-lg text-textCol"
@@ -59,7 +59,7 @@ const Sidebar = () => {
           <h2>PURITY UI DASHBOARD</h2>
         </div>
 
-        <nav className="mt-6 ">
+        <nav className="mt-6 w-full ">
           {menuItems.map((item) => {
             const isActive = pathname == item.path;
             return (
@@ -77,7 +77,7 @@ const Sidebar = () => {
                   }`}
                 />
                 <span
-                  className={` ml-3 ${
+                  className={`w-full ml-3 ${
                     isActive ? "text-textCol font-semibold" : ""
                   }`}
                 >
