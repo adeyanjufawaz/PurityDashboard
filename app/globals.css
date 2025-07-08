@@ -4,13 +4,16 @@
 @theme {
   --color-pry: var(--pry);
   --color-card: var(--card);
+  --color-lightGreen: var(--lightGreen);
   --color-sec: var(--sec);
   --color-tet: var(--tet);
   --color-darkCrad: var(--darkCrad);
   --color-textGreyCol: var(--textGreyCol);
   --color-textCol: var(--textCol);
   --color-grayCol: var(--grayCol);
-  --color-notification:var(--notiCol)
+  --color-notification:var(--notiCol);
+  --color-profileSec:var(--profileSec);
+  --color-overview:var(--overview);
 }
 
 :root {
@@ -23,6 +26,9 @@
   --textGreyCol: #666;
   --textCol: #000;
   --grayCol: #63686e;
+  --lightGreen:#44decc;
+  --profileSec:#e6e0e0cc;
+  --overview:white;
 }
 .dark {
   --pry: #1A202C;
@@ -34,6 +40,9 @@
   --textGreyCol: #fff;
   --textCol: #fff;
   --grayCol: #06202b;
+  --lightGreen:#44decc;
+  --profileSec:#18af9e;
+  --overview:rgba(255, 255, 255, 0.3);
 }
 
 body {
@@ -44,4 +53,36 @@ body {
 }
 table {
   border-collapse: collapse;
+}
+/* Add to styles/globals.css */
+.toggle-switch {
+  appearance: none;
+  width: 2.25rem;
+  height: 1.25rem;
+  background-color: #ccc;
+  border-radius: 9999px;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.toggle-switch:checked {
+  background-color: #14b8a6; /* teal-500 */
+}
+
+.toggle-switch::before {
+  content: "";
+  position: absolute;
+  top: 0.125rem;
+  left: 0.125rem;
+  width: 1rem;
+  height: 1rem;
+  background: white;
+  border-radius: 9999px;
+  transition: transform 0.3s;
+}
+
+.toggle-switch:checked::before {
+  transform: translateX(1rem);
 }

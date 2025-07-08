@@ -101,6 +101,7 @@ interface Person {
   age: number;
   sex: 'Male' | 'Female' | 'Other';
   members: string;
+  school: string;
   address: string;
   mail: string;
   phone: string;
@@ -112,7 +113,8 @@ const people: Person[] = [
     name: 'Emma Johnson',
     age: 22,
     sex: 'Female',
-    members: 'University of California',
+    school: 'University of California',
+    members:"",
     address: '123 Main St, Los Angeles, CA',
     mail: 'emma.johnson@example.com',
     phone: '(213) 555-1234',
@@ -122,7 +124,8 @@ const people: Person[] = [
     name: 'Michael Chen',
     age: 19,
     sex: 'Male',
-    members: 'New York University',
+    school: 'New York University',
+    members:"",
     address: '456 Broadway, New York, NY',
     mail: 'michael.chen@example.com',
     phone: '(212) 555-5678',
@@ -132,7 +135,8 @@ const people: Person[] = [
     name: 'Sarah Williams',
     age: 21,
     sex: 'Female',
-    members: 'University of Texas',
+    school: 'University of Texas',
+    members:"",
     address: '789 Oak Ave, Austin, TX',
     mail: 'sarah.williams@example.com',
     phone: '(512) 555-9012',
@@ -142,7 +146,8 @@ const people: Person[] = [
     name: 'David Kim',
     age: 20,
     sex: 'Male',
-    members: 'Harvard University',
+    school: 'Harvard University',
+    members:"",
     address: '101 Cambridge St, Cambridge, MA',
     mail: 'david.kim@example.com',
     phone: '(617) 555-3456',
@@ -152,7 +157,8 @@ const people: Person[] = [
     name: 'Jessica Martinez',
     age: 23,
     sex: 'Female',
-    members: 'Stanford University',
+    school: 'Stanford University',
+    members:"",
     address: '202 Palm Dr, Stanford, CA',
     mail: 'jessica.martinez@example.com',
     phone: '(650) 555-7890',
@@ -162,7 +168,8 @@ const people: Person[] = [
     name: 'Ryan Taylor',
     age: 18,
     sex: 'Male',
-    members: 'University of Michigan',
+    school: 'University of Michigan',
+    members:"",
     address: '303 State St, Ann Arbor, MI',
     mail: 'ryan.taylor@example.com',
     phone: '(734) 555-2345',
@@ -172,7 +179,8 @@ const people: Person[] = [
     name: 'Olivia Brown',
     age: 22,
     sex: 'Female',
-    members: 'Columbia University',
+    school: 'Columbia University',
+    members:"",
     address: '404 Riverside Dr, New York, NY',
     mail: 'olivia.brown@example.com',
     phone: '(212) 555-6789',
@@ -182,7 +190,8 @@ const people: Person[] = [
     name: 'Daniel Wilson',
     age: 19,
     sex: 'Male',
-    members: 'University of Florida',
+    school: 'University of Florida',
+    members:"",
     address: '505 Sunshine Blvd, Gainesville, FL',
     mail: 'daniel.wilson@example.com',
     phone: '(352) 555-0123',
@@ -248,6 +257,7 @@ import {
   SiSpotify,
   SiDatabricks, // used as a placeholder diamond icon
 } from 'react-icons/si';
+import { user1, user2, user4, user5 } from "@/public/img";
 
 export const projects:{
     icon: any;
@@ -298,3 +308,34 @@ export const projects:{
     completion: "25%",
   },
 ];
+
+
+
+
+  export const convoInfo = [
+    {
+      name: "Sophie B.",
+      message: "Hi! I need more information...",
+      avatar: user1, 
+    },
+    {
+      name: "Sophie B.",
+      message: "Awesome work, can you change...",
+      avatar: user4,
+    },
+    {
+      name: "Sophie B.",
+      message: "Have a great afternoon...",
+      avatar: user5,
+    },
+    {
+      name: "Sophie B.",
+      message: "About files I can...",
+      avatar: user4,
+    },
+    {
+      name: "Sophie B.",
+      message: "About files I can...",
+      avatar: user1,
+    },
+  ];

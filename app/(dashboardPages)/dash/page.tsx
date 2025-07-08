@@ -15,7 +15,7 @@ export default function Home() {
       document.documentElement.classList.add(getSavedTheme);
     }
   }, []);
-  const tableHeader = Object.keys(people[0]);
+  const tableHeader = Object.keys(people[0]).slice(0,people.length);
 
   return (
     <div className="p-4 bg-pry ">
@@ -87,7 +87,7 @@ export default function Home() {
             <div className=" ">
               <table className="py-3 mt-10  ">
                 <thead>
-                  <tr className="min-w-[120px] border-b-3 p-3 text-left">
+                  <tr className="min-w-[120px]  p-3 text-left">
                     {tableHeader.map((header) => (
                       <th key={header} className="uppercase pb-3">
                         {header}
@@ -100,28 +100,28 @@ export default function Home() {
 
                 {people.map((person) => (
                   <tr key={person.address} className="p-2 text-left">
-                    <td className="p-2 border-b-3 min-w-[120px]">
+                    <td className="p-2  min-w-[120px]">
                       {person.name}
                     </td>
-                    <td className="p-2 border-b-3 min-w-[120px]">
+                    <td className="p-2  min-w-[100px]">
                       {person.age}
                     </td>
-                    <td className="p-2  border-b-3 min-w-[120px]">
+                    <td className="p-2   min-w-[120px]">
                       {person.sex}
                     </td>
-                    <td className="border-b-3  min-w-[150px]">
+                    <td className="p-2 min-w-[200px] ">
+                      {person.school}
+                    </td>
+                    <td className="  min-w-[150px]">
                       <AlignedImage total={person.totalImg} />
                     </td>
-                    <td className="p-2 min-w-[200px] border-b-3">
-                      {person.members}
-                    </td>
-                    <td className="p-2 min-w-[200px] border-b-3 ">
+                    <td className="p-2 min-w-[200px]  ">
                       {person.address}
                     </td>
-                    <td className="p-2 border-b-3 min-w-[120px]">
+                    <td className="p-2  min-w-[120px]">
                       {person.mail}
                     </td>
-                    <td className="p-2 min-w-[150px] border-b-3">
+                    <td className="p-2 min-w-[150px] ">
                       {person.phone}
                     </td>
                   </tr>
