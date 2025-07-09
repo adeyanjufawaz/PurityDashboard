@@ -113,7 +113,7 @@ export default function Home() {
                       {person.school}
                     </td>
                     <td className="  min-w-[150px]">
-                      <AlignedImage total={person.totalImg} />
+                      <AlignedImage height="30" width="30" total={person.totalImg} />
                     </td>
                     <td className="p-2 min-w-[200px]  ">
                       {person.address}

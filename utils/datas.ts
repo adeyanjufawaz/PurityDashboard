@@ -204,7 +204,7 @@ export default people;
 
 export const authorsData = [
   {
-    image: '/images/esthera.png', 
+    image: user1, 
     name: 'Esthera Jackson',
     email: 'alexa@simmmple.com',
     organization: 'Organization',
@@ -213,7 +213,7 @@ export const authorsData = [
     date: '14/06/21',
   },
   {
-    image: '/images/alexa.png',
+    image: user5,
     name: 'Alexa Liras',
     email: 'laurent@simmmple.com',
     organization: 'Developer',
@@ -222,7 +222,7 @@ export const authorsData = [
     date: '12/05/21',
   },
   {
-    image: '/images/laurent.png',
+    image: user2,
     name: 'Laurent Michael',
     email: 'laurent@simmmple.com',
     organization: 'Projects',
@@ -231,7 +231,7 @@ export const authorsData = [
     date: '07/06/21',
   },
   {
-    image: '/images/freduardo.png',
+    image: user1,
     name: 'Freduardo Hill',
     email: 'freduardo@simmmple.com',
     organization: 'Organization',
@@ -240,7 +240,7 @@ export const authorsData = [
     date: '14/11/21',
   },
   {
-    image: '/images/daniel.png',
+    image: user5,
     name: 'Daniel Thomas',
     email: 'daniel@simmmple.com',
     organization: 'Developer',

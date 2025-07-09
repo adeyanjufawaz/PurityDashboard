@@ -1,6 +1,7 @@
 import Card from "@/app/components/general/Card";
 import AlignedImage from "@/app/components/table/AlignedImage";
 import { authorsData, projects } from "@/utils/datas";
+import Image from "next/image";
 
 function Table() {
   const tableHeader = Object.keys(authorsData[0]);
@@ -33,7 +34,9 @@ function Table() {
                   <tr key={author.name}>
                     <td className="py-4 p-4">
                       <div className="flex gap-4">
-                        <div className="h-12 w-12 rounded-2xl bg-sec"></div>
+                        <div className="h-12 w-12 rounded-2xl bg-sec">
+                          <Image src={author.image} alt="Authir" className="w-full h-full rounded-2xl object-cover"/>
+                        </div>
                         <div className="flex flex-col">
                           <h2 className="text-lg font-semibold">
                             {author.name}

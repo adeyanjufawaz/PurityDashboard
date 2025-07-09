@@ -22,7 +22,7 @@ export default function RootLayout({
         <Sidebar />
         <main className="flex-1 relative  w-[calc(100%-250px)] lg:ml-[250px] overflow-x-auto ">
           <MobileNav />
-          <div className="mt-12">{children}</div>
+          <div className="mt-20 lg:mt-5">{children}</div>
 
           <Footer />
         </main>
