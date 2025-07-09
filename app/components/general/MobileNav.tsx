@@ -6,7 +6,7 @@ import { MdDarkMode, MdLightMode, MdMenu } from "react-icons/md";
 import { IoMdNotifications } from "react-icons/io";
 import { useProvider } from "./NavOpenAndThemeProvider";
 import Notification from "../notification/notification";
-import { usePathname } from "next/navigation";
+import { usePathname,useRouter } from "next/navigation";
 
 function MobileNav() {
   const {
@@ -19,6 +19,7 @@ function MobileNav() {
 
   const pathname = usePathname(); 
   const lastSegment = pathname.split("/").filter(Boolean).pop();
+  const router = useRouter()
 
   return (
     <div className="flex flex-col md:flex-row mt-4 px-8 justify-between gap-4 items-start md:items-center  h-10">
@@ -26,6 +27,7 @@ function MobileNav() {
         <h2 className="capitalize">Page / {lastSegment == "dash" ? "Dashbaord" : lastSegment} </h2>
         <p className="capitalize"> {lastSegment == "dash" ? "Dashbaord" : lastSegment}</p>
       </div>
+
       <div className="flex gap-4 h-full">
         <div className="md:w-[200px] h-full relative ">
           <input
@@ -36,7 +38,7 @@ function MobileNav() {
           <FaSearch className="absolute h-7/8 top-[7%] left-2 text-textCol" />
         </div>
         <div className="flex items-center gap-2 ">
-          <div className="cursor-pointer text-textGreyCol">
+          <div onClick={()=>router.push("/profile")} className="cursor-pointer text-textGreyCol">
             <FaUser />
           </div>
           <div className="hidden lg:block cursor-pointer text-textGreyCol font-semibold">
