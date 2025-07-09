@@ -14,6 +14,7 @@
   --color-notification:var(--notiCol);
   --color-profileSec:var(--profileSec);
   --color-overview:var(--overview);
+  --color-nav:var(--nav);
 }
 
 :root {
@@ -29,6 +30,7 @@
   --lightGreen:#44decc;
   --profileSec:#e6e0e0cc;
   --overview:white;
+  --nav:#fff;
 }
 .dark {
   --pry: #1A202C;
@@ -43,6 +45,7 @@
   --lightGreen:#44decc;
   --profileSec:#18af9e;
   --overview:rgba(255, 255, 255, 0.3);
+  --nav:rgb(255, 255, 255,.1);
 }
 
 body {

@@ -3,17 +3,17 @@ import React from "react";
 import Footer from "@/app/components/general/Footer";
 import { useRouter } from "next/navigation";
 import { FaBars, FaFile, FaHome, FaRocket, FaUser } from "react-icons/fa";
-import { SiChakraui } from "react-icons/si";
 import { useProvider } from "@/app/components/general/NavOpenAndThemeProvider";
+import { SiChakraui } from "react-icons/si";
 import Sidebar from "@/app/components/general/Sidebar";
 
-function NAV() {
+function Nav() {
   const router = useRouter();
   const { toggleIsOpen } = useProvider();
   return (
     <>
       {/* // Desktop */}
-      <nav className=" hidden lg:flex absolute top-3 justify-between shadow-lg items-center bg-pry rounded-2xl px-4 py-6 mx-auto w-full">
+      <nav className=" hidden backdrop-blur-md lg:flex absolute top-3 justify-between shadow-lg items-center bg-nav rounded-2xl px-4 py-6 mx-auto w-full">
         <h2
           onClick={() => router.push("/dash")}
           className="font-semibold cursor-pointer text-base uppercase"
@@ -56,7 +56,7 @@ function NAV() {
       </nav>
 
       {/* // Mobile */}
-      <nav className="lg:hidden flex absolute top-3 justify-between shadow-lg items-center bg-pry rounded-2xl px-4 py-6 mx-auto w-full">
+      <nav className="lg:hidden backdrop-blur-md flex absolute top-3 justify-between shadow-lg items-center bg-nav rounded-2xl px-4 py-6 mx-auto w-full">
         <h2
           onClick={() => router.push("/dash")}
           className="font-semibold cursor-pointer text-base uppercase"
@@ -73,13 +73,14 @@ function NAV() {
 }
 
 function SignIn() {
+  const router = useRouter();
   return (
     <div>
       <div className="lg:hidden">
         <Sidebar />
       </div>
       <div className="w-4/5 relative mx-auto">
-        <NAV />
+        <Nav />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-10">
         <div className="min-h-[70vh] lg:min-h-[80vh] flex justify-center items-center h-full">
@@ -120,7 +121,7 @@ function SignIn() {
               </button>
 
               <h2 className="text-center text-tet font-semibold">
-                Don't have an account? <span className="text-sec">Sign Up</span>
+                Don't have an account? <span onClick={()=>router.push("/signup") } className="text-sec cursor-pointer">Sign Up</span>
               </h2>
             </div>
           </div>
