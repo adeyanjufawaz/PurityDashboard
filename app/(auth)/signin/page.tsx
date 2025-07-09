@@ -7,7 +7,7 @@ import { SiChakraui } from "react-icons/si";
 import { useProvider } from "@/app/components/general/NavOpenAndThemeProvider";
 import Sidebar from "@/app/components/general/Sidebar";
 
-export function NAV() {
+function NAV() {
   const router = useRouter();
   const { toggleIsOpen } = useProvider();
   return (
