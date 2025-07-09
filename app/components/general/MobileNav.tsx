@@ -41,7 +41,7 @@ function MobileNav() {
           <div onClick={()=>router.push("/profile")} className="cursor-pointer text-textGreyCol">
             <FaUser />
           </div>
-          <div className="hidden lg:block cursor-pointer text-textGreyCol font-semibold">
+          <div onClick={()=>router.push("/signin")} className="hidden lg:block cursor-pointer text-textGreyCol font-semibold">
             Sign in
           </div>
           <div
